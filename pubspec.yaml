@@ -19,3 +19,15 @@ dev_dependencies:
 
 flutter:
   uses-material-design: true
+
+  assets:
+
+    - assets/instructor.png
+    - assets/libro.png
+    - assets/tablero.png
+    - assets/ideas.png
+    - assets/final.png
+    - assets/barras.png
+    - assets/word.png
+    - assets/exel.png
+    - assets/powerpoint.png

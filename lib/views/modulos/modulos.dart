@@ -1,6 +1,8 @@
-// ignore_for_file: prefer_const_constructors
+// ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables
 
 import 'package:flutter/material.dart';
+import 'package:profesores2/components/items.dart';
+import 'package:profesores2/components/titulos.dart';
 
 class ModulosView extends StatelessWidget {
   const ModulosView({super.key});
@@ -8,7 +10,34 @@ class ModulosView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Text('hola'),
+      body: Center(
+        child: Column(
+          children: [
+            titulos2Modulos('MÓDULOS'),
+            Expanded(
+              child: Padding(
+                padding: EdgeInsets.all(20),
+                child: ListView(
+                  children: [
+                    itemWithImage1(context, 'INTRODUCCIÓN', 'assets/instructor.png', 0.2, () {}),
+                    SizedBox(height: 20,),
+                    itemWithImage1(context, 'PRELECTURA', 'assets/barras.png', 0.2, () {}),
+                    SizedBox(height: 20,),
+                    itemWithImage1(context, 'ESTRATEGIAS', 'assets/tablero.png', 0.2, () {}),
+                    SizedBox(height: 20,),
+                    itemWithImage1(context, 'LECTURA', 'assets/libro.png', 0.2, () {}),
+                    SizedBox(height: 20,),
+                    itemWithImage1(context, 'POSTLECTURA', 'assets/ideas.png', 0.2, () {}),
+                    SizedBox(height: 20,),
+                    itemWithImage1(context, 'CONCLUSIONES', 'assets/final.png', 0.2, () {}),
+                    SizedBox(height: 20,),
+                  ],
+                ),
+              ),
+            ),
+          ],
+        ),
+      ),
     );
   }
 }

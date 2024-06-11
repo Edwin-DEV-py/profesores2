@@ -15,3 +15,20 @@ Widget titulos1(String text){
     )
   );
 }
+
+Widget titulos2Modulos(String text){
+  return Column(
+    children: [
+      SizedBox(
+        height: 50,
+      ),
+      Divider(
+        color: Colors.black,
+      ),
+      titulos1(text),
+      Divider(
+        color: Colors.black,
+      )
+    ],
+  );
+}

@@ -1,4 +1,4 @@
-// ignore_for_file: prefer_const_constructors
+// ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables, non_constant_identifier_names
 
 import 'package:flutter/material.dart';
 import 'botones.dart';
@@ -51,6 +51,64 @@ Widget itemWithDocument1(BuildContext context, String rutaImagen, String text, S
           ),
         ],
       ),
+    ],
+  );
+}
+
+Widget ItemCountColumnaVertical(BuildContext context, String imagen, String profe, String tel, String correo){
+
+  double screenWidth = MediaQuery.of(context).size.width;
+
+  return Column(
+    children: [
+      Row(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: [
+          Image(
+            image: AssetImage(imagen),
+            width: screenWidth*0.5,
+          ),
+        ],
+      ),
+      Row(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: [
+          Text(
+            profe,
+            style: TextStyle(
+              fontSize: 20,
+              color: Colors.grey,
+              fontWeight: FontWeight.bold
+            ),
+          )
+        ],
+      ),
+      Row(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: [
+          Text(
+            tel,
+            style: TextStyle(
+              fontSize: 20,
+              color: Colors.grey,
+              fontWeight: FontWeight.bold
+            ),
+          )
+        ],
+      ),
+      Row(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: [
+          Text(
+            correo,
+            style: TextStyle(
+              fontSize: 20,
+              color: Colors.grey,
+              fontWeight: FontWeight.bold
+            ),
+          )
+        ],
+      )
     ],
   );
 }

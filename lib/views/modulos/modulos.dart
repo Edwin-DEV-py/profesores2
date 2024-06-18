@@ -1,8 +1,10 @@
 // ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables
 
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:profesores2/components/items.dart';
 import 'package:profesores2/components/titulos.dart';
+import 'package:profesores2/views/modulos/subModulos/introduccion.dart';
 
 class ModulosView extends StatelessWidget {
   const ModulosView({super.key});
@@ -19,7 +21,7 @@ class ModulosView extends StatelessWidget {
                 padding: EdgeInsets.all(20),
                 child: ListView(
                   children: [
-                    itemWithImage1(context, 'INTRODUCCIÓN', 'assets/instructor.png', 0.2, () {}),
+                    itemWithImage1(context, 'INTRODUCCIÓN', 'assets/instructor.png', 0.2, () => Get.to(() => ModuloIntroduccion(),transition: Transition.downToUp, duration: Duration(milliseconds: 300))),
                     SizedBox(height: 20,),
                     itemWithImage1(context, 'PRELECTURA', 'assets/barras.png', 0.2, () {}),
                     SizedBox(height: 20,),

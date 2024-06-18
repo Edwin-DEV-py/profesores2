@@ -2,6 +2,8 @@
 
 import 'package:flutter/material.dart';
 import 'package:curved_navigation_bar/curved_navigation_bar.dart';
+import 'package:profesores2/views/home.dart';
+import 'package:profesores2/views/modulos/contacto.dart';
 import 'package:profesores2/views/modulos/modulos.dart';
 import 'package:profesores2/views/modulos/recursos.dart';
 
@@ -18,7 +20,9 @@ class _PrincipalViewState extends State<PrincipalView> {
 
   final pageIndex = [
     ModulosView(),
-    RecursosView()
+    RecursosView(),
+    ContactoView(),
+    Home()
   ];
 
   @override

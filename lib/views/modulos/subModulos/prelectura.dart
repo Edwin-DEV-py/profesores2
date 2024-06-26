@@ -6,6 +6,7 @@ import 'package:profesores2/components/botones.dart';
 import 'package:profesores2/components/textos.dart';
 import 'package:profesores2/components/titulos.dart';
 import 'package:profesores2/components/urls.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 
 class ModuloPrelectura extends StatefulWidget {
   const ModuloPrelectura({super.key});
@@ -48,12 +49,27 @@ class _ModuloPrelecturaState extends State<ModuloPrelectura> {
                         ),
                       ),
                     SizedBox(height: 10.0),
-                    video_show('-C-YpcVkvc8'),
+                    video_show('iDc_K8xWBjA'),
                     SizedBox(height: 10,),
                     titulos2('PARTES DE UN TEXTO'),
                     SizedBox(height: 10,),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        Image(
+                          image: AssetImage('assets/partes.png'),
+                          width: MediaQuery.of(context).size.width*0.9
+                        )
+                      ],
+                    ),
                     SizedBox(height: 20,),
-                    btnAzul1('FINALIZAR', () => Get.back()),
+                    btnAzul1('FINALIZAR',
+                    () async{
+                      Get.back();
+                      SharedPreferences prefs = await SharedPreferences.getInstance();
+                      await prefs.setBool('modulo_estrategias_activo', true);
+                    }
+                    ),
                     SizedBox(height: 20,),
                   ],
                 ),

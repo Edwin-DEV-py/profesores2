@@ -15,6 +15,23 @@ Widget itemWithImage1(BuildContext context,double horizontal ,String text, Strin
         width: screenWidth*0.3,
       ),
       SizedBox(width: 20,),
+      btnAzul2Principales(text, onPressed, horizontal)
+    ],
+  );
+}
+
+Widget itemWithImage2(BuildContext context,double horizontal ,String text, String rutaImagen, double sizeImage, VoidCallback onPressed){
+  
+  double screenWidth = MediaQuery.of(context).size.width;
+  
+  return Row(
+    mainAxisAlignment: MainAxisAlignment.start,
+    children: [
+      Image(
+        image: AssetImage(rutaImagen),
+        width: screenWidth*0.3,
+      ),
+      SizedBox(width: 20,),
       btnAzul2(text, onPressed, horizontal)
     ],
   );
@@ -135,5 +152,23 @@ Widget itemsReferencia(BuildContext context){
         width: screenWidth*0.2,
       ),
     ],
+  );
+}
+
+Widget itemLectura(BuildContext context,  VoidCallback onPressed){
+
+  double screenWidth = MediaQuery.of(context).size.width;
+
+  return InkWell(
+    onTap: onPressed,
+    child: Row(
+      mainAxisAlignment: MainAxisAlignment.center,
+      children: [
+        Image(
+          image: AssetImage('assets/libro2.png'),
+          width: screenWidth * 0.3,
+        ),
+      ],
+    ),
   );
 }

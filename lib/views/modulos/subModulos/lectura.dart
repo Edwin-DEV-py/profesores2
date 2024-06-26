@@ -7,6 +7,7 @@ import 'package:profesores2/components/items.dart';
 import 'package:profesores2/components/textos.dart';
 import 'package:profesores2/components/titulos.dart';
 import 'package:profesores2/components/urls.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 
 class ModuloLectura extends StatefulWidget {
   const ModuloLectura({super.key});
@@ -68,7 +69,7 @@ class _ModuloLecturaState extends State<ModuloLectura> {
                         ),
                       ),
                     SizedBox(height: 10.0),
-                    video_show('-C-YpcVkvc8'),
+                    video_show('JkfW0g6AJWw'),
                     SizedBox(height: 20,),
                     titulos2('HERRAMIENTAS'),
                     SizedBox(height: 10.0),
@@ -76,8 +77,19 @@ class _ModuloLecturaState extends State<ModuloLectura> {
                     SizedBox(height: 20.0),
                     titulos2('TEXTOS'),
                     SizedBox(height: 10.0),
+                    itemLectura(context, (){}),
+                    SizedBox(height: 10.0),
+                    itemLectura(context, (){}),
+                    SizedBox(height: 10.0),
+                    itemLectura(context, (){}),
                     SizedBox(height: 20,),
-                    btnAzul1('FINALIZAR', () => Get.back()),
+                    btnAzul1('FINALIZAR',
+                    () async{
+                      Get.back();
+                      SharedPreferences prefs = await SharedPreferences.getInstance();
+                      await prefs.setBool('modulo_postlectura_activo', true);
+                    }
+                    ),
                     SizedBox(height: 20,),
                   ],
                 ),

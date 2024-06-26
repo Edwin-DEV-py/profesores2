@@ -131,7 +131,7 @@ class _SubModuloInferencialState extends State<SubModuloInferencial> {
                       'Estas preguntas, propuestas por Cooper (1990), proporcionan una guía completa para explorar y analizar un texto.'
                     ),
                     SizedBox(height: 10,),
-                    video_show('-C-YpcVkvc8'),
+                    video_show('rkWb3uAGSSw'),
                     SizedBox(height: 20,),
                     btnAzul1('FINALIZAR', () => Get.back()),
                     SizedBox(height: 20,),

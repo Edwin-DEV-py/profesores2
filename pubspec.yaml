@@ -11,6 +11,7 @@ dependencies:
   flutter:
     sdk: flutter
   get: ^4.6.6
+  shared_preferences: ^2.2.3
   url_launcher: ^6.3.0
   youtube_player_flutter: ^9.0.1
 
@@ -41,3 +42,5 @@ flutter:
     - assets/lup.png
     - assets/ruleta.png
     - assets/pdf.png
+    - assets/libro2.png
+    - assets/partes.png

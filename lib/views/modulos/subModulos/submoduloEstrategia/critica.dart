@@ -58,7 +58,7 @@ class _SubModuloCriticaState extends State<SubModuloCritica> {
                       '4.Expresión de la Opinión: Expresar claramente la opinión utilizando argumentos bien fundamentados.'
                     ),
                     SizedBox(height: 10,),
-                    video_show('-C-YpcVkvc8'),
+                    video_show('Bgmv4GNHMqE'),
                     SizedBox(height: 20,),
                     btnAzul1('FINALIZAR', () => Get.back()),
                     SizedBox(height: 20,),

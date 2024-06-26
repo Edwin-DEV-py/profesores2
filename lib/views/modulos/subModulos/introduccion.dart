@@ -6,6 +6,7 @@ import 'package:profesores2/components/botones.dart';
 import 'package:profesores2/components/textos.dart';
 import 'package:profesores2/components/titulos.dart';
 import 'package:profesores2/components/urls.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 
 class ModuloIntroduccion extends StatefulWidget {
   const ModuloIntroduccion({super.key});
@@ -126,9 +127,15 @@ class _ModuloIntroduccionState extends State<ModuloIntroduccion> {
                         ),
                       ),
                     SizedBox(height: 10,),
-                    video_show('-C-YpcVkvc8'),
+                    video_show('jFklK9CERHI'),
                     SizedBox(height: 10,),
-                    btnAzul1('FINALIZAR', () => Get.back())
+                    btnAzul1ConParametro('FINALIZAR',
+                    () async{
+                      Get.back();
+                      SharedPreferences prefs = await SharedPreferences.getInstance();
+                      await prefs.setBool('modulo_prelectura_activo', true);
+                    }
+                    )
                   ],
                 ),
               )

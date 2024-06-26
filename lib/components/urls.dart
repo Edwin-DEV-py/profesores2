@@ -30,3 +30,36 @@ Widget video_show(String url){
     ],
   );
 }
+
+//Para redirigir a un quiz
+Widget Widget_url_activities(String txt){
+
+  _launchURL(String url) async {
+  if (!await launchUrl(Uri.parse(url))) {
+    throw 'No se pudo abrir la URL: $url';
+  }else{
+      await launchUrl(Uri.parse(url));
+    }
+  }
+
+  return Row(
+      mainAxisAlignment: MainAxisAlignment.center,
+      children: [
+        GestureDetector(
+          onTap: () {
+            _launchURL(txt);
+          },
+          child: Column(
+            children: [
+              Image(
+              image: AssetImage('assets/quiz.png'),
+              fit: BoxFit.cover,
+              height: 150,
+            ),
+            ],
+          )
+        ),
+      ],
+    );
+  
+}

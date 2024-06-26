@@ -16,6 +16,20 @@ Widget titulos1(String text){
   );
 }
 
+Widget titulos2(String text){
+  return Title(
+    color: Colors.black, 
+    child: Text(
+      text,
+      textAlign: TextAlign.center,
+      style: TextStyle(
+        fontSize: 20,
+        fontWeight: FontWeight.bold
+      ),
+    )
+  );
+}
+
 Widget titulos2Modulos(String text){
   return Column(
     children: [

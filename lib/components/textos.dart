@@ -1,4 +1,4 @@
-// ignore_for_file: prefer_const_constructors
+// ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables
 
 import 'package:flutter/material.dart';
 
@@ -32,6 +32,23 @@ Widget textoParrafosJustificado(String text){
             height: 1.2,
           ),
       ),
+    ),
+  );
+}
+
+Widget textodobleconNegrilla(String txt1, String txt2){
+  return RichText(
+    text: TextSpan(
+      style: TextStyle(fontSize: 16.0, color: Colors.black),
+      children: <TextSpan>[
+        TextSpan(
+          text: '• $txt1',
+          style: TextStyle(fontWeight: FontWeight.bold),
+        ),
+        TextSpan(
+          text: txt2,
+        ),
+      ],
     ),
   );
 }

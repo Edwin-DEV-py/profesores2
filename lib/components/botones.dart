@@ -27,7 +27,7 @@ Widget btnAzul1(String text, VoidCallback onPressed){
   );
 }
 
-Widget btnAzul2(String text, VoidCallback onPressed){
+Widget btnAzul2(String text, VoidCallback onPressed, double horizontal){
   return Wrap(
     alignment: WrapAlignment.center,
     children: [
@@ -41,7 +41,7 @@ Widget btnAzul2(String text, VoidCallback onPressed){
           ),
         ),
         style: ElevatedButton.styleFrom(
-          padding: EdgeInsets.symmetric(horizontal: 20.0, vertical: 10.0),
+          padding: EdgeInsets.symmetric(horizontal: horizontal, vertical: 10.0),
           backgroundColor: const Color.fromARGB(255, 24, 63, 139),
           shape: RoundedRectangleBorder(
             borderRadius: BorderRadius.circular(10),

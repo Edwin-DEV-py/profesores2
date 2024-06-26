@@ -1,9 +1,11 @@
-// ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables
+// ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables, sized_box_for_whitespace
 
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:profesores2/components/botones.dart';
 import 'package:profesores2/components/textos.dart';
 import 'package:profesores2/components/titulos.dart';
+import 'package:profesores2/components/urls.dart';
 
 class ModuloIntroduccion extends StatefulWidget {
   const ModuloIntroduccion({super.key});
@@ -124,7 +126,9 @@ class _ModuloIntroduccionState extends State<ModuloIntroduccion> {
                         ),
                       ),
                     SizedBox(height: 10,),
-                    btnAzul1('FINALIZAR', (){})
+                    video_show('-C-YpcVkvc8'),
+                    SizedBox(height: 10,),
+                    btnAzul1('FINALIZAR', () => Get.back())
                   ],
                 ),
               )

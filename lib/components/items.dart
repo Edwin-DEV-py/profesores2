@@ -3,7 +3,7 @@
 import 'package:flutter/material.dart';
 import 'botones.dart';
 
-Widget itemWithImage1(BuildContext context, String text, String rutaImagen, double sizeImage, VoidCallback onPressed){
+Widget itemWithImage1(BuildContext context,double horizontal ,String text, String rutaImagen, double sizeImage, VoidCallback onPressed){
   
   double screenWidth = MediaQuery.of(context).size.width;
   
@@ -15,7 +15,7 @@ Widget itemWithImage1(BuildContext context, String text, String rutaImagen, doub
         width: screenWidth*0.3,
       ),
       SizedBox(width: 20,),
-      btnAzul2(text, onPressed)
+      btnAzul2(text, onPressed, horizontal)
     ],
   );
 }

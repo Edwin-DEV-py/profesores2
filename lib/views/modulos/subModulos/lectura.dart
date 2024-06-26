@@ -7,6 +7,9 @@ import 'package:profesores2/components/items.dart';
 import 'package:profesores2/components/textos.dart';
 import 'package:profesores2/components/titulos.dart';
 import 'package:profesores2/components/urls.dart';
+import 'package:profesores2/views/modulos/subModulos/submodulosPostlectura/post1.dart';
+import 'package:profesores2/views/modulos/subModulos/submodulosPostlectura/post2.dart';
+import 'package:profesores2/views/modulos/subModulos/submodulosPostlectura/post3.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 class ModuloLectura extends StatefulWidget {
@@ -77,11 +80,11 @@ class _ModuloLecturaState extends State<ModuloLectura> {
                     SizedBox(height: 20.0),
                     titulos2('TEXTOS'),
                     SizedBox(height: 10.0),
-                    itemLectura(context, (){}),
+                    itemLectura(context, () => Get.to(Post1())),
                     SizedBox(height: 10.0),
-                    itemLectura(context, (){}),
+                    itemLectura(context, ()=> Get.to(Post2())),
                     SizedBox(height: 10.0),
-                    itemLectura(context, (){}),
+                    itemLectura(context, ()=> Get.to(Post3())),
                     SizedBox(height: 20,),
                     btnAzul1('FINALIZAR',
                     () async{

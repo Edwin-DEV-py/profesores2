@@ -17,7 +17,7 @@ class Post2 extends StatelessWidget {
       body: Center(
         child: Column(
           children: [
-            titulos2Modulos('POSTLECTURA 1'),
+            titulos2Modulos('POSTLECTURA 2'),
             Expanded(
               child: Padding(
                 padding: EdgeInsets.all(20.0),

@@ -16,7 +16,22 @@ class Home extends StatelessWidget {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            titulos1('BIENVENIDO A'),
+            titulos1('BIENVENIDOS A'),
+            SizedBox(height: 20,),
+            Container(
+              width: MediaQuery.of(context).size.width * 0.9,
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(12),
+              ),
+              child: ClipRRect(
+                borderRadius: BorderRadius.circular(12),
+                child: Image.asset(
+                  'assets/portada.jpeg',
+                  fit: BoxFit.cover,
+                  height: MediaQuery.of(context).size.width
+                ),
+              ),
+            ),
             SizedBox(height: 20,),
             btnAzul1('INICIAR', () => Get.to(() => PrincipalView(), duration: Duration(milliseconds: 300)))
           ],

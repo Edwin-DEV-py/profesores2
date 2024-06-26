@@ -5,7 +5,9 @@ import 'package:get/get.dart';
 import 'package:profesores2/components/botones.dart';
 import 'package:profesores2/components/items.dart';
 import 'package:profesores2/components/titulos.dart';
-import 'package:profesores2/components/urls.dart';
+import 'package:profesores2/views/modulos/subModulos/submoduloEstrategia/critica.dart';
+import 'package:profesores2/views/modulos/subModulos/submoduloEstrategia/inferencial.dart';
+import 'package:profesores2/views/modulos/subModulos/submoduloEstrategia/literal.dart';
 
 class ModuloEstrategias extends StatelessWidget {
   const ModuloEstrategias({super.key});
@@ -23,15 +25,11 @@ class ModuloEstrategias extends StatelessWidget {
                 child: ListView(
                   shrinkWrap: true,
                   children: [
-                    itemWithImage1(context, 28,'LITERALES', 'assets/book.png', 0.2, () {}),
+                    itemWithImage1(context, 45,'LITERALES', 'assets/book.png', 0.2, () => Get.to(() => SubModuloLiteral(),transition: Transition.downToUp, duration: Duration(milliseconds: 300))),
                     SizedBox(height: 10,),
-                    itemWithImage1(context, 28,'INFERENCIALES', 'assets/lup.png', 0.2, () {}),
+                    itemWithImage1(context, 20,'INFERENCIALES', 'assets/lup.png', 0.2, () => Get.to(() => SubModuloInferencial(),transition: Transition.downToUp, duration: Duration(milliseconds: 300))),
                     SizedBox(height: 10,),
-                    itemWithImage1(context, 28,'INTERPRETACIÓN', 'assets/cerebro.png', 0.2, () {}),
-                    SizedBox(height: 20,),
-                    titulos2('¿QUE APRENDISTE?'),
-                    SizedBox(height: 10,),
-                    Widget_url_activities('https://www.google.com/'),
+                    itemWithImage1(context, 12,'INTERPRETACIÓN', 'assets/cerebro.png', 0.2, () => Get.to(() => SubModuloCritica(),transition: Transition.downToUp, duration: Duration(milliseconds: 300))),
                     SizedBox(height: 20,),
                     btnAzul1('FINALIZAR', () => Get.back()),
                     SizedBox(height: 20,),

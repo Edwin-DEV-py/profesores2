@@ -32,3 +32,23 @@ Widget titulos2Modulos(String text){
     ],
   );
 }
+
+Widget subTitulos(String text){
+  return Text(
+    text,
+    style: TextStyle(
+      fontSize: 18,
+      fontWeight: FontWeight.bold
+    ),
+  );
+}
+
+Widget subTitulos2(String text){
+  return Text(
+    text,
+    style: TextStyle(
+      fontSize: 16,
+      fontWeight: FontWeight.bold
+    ),
+  );
+}

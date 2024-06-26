@@ -24,7 +24,7 @@ class ContactoView extends StatelessWidget {
                       'assets/maestro.png', 
                       'IVAN DARIO ROJAS MARTINEZ', 
                       '321546879789', 
-                      'profe1@gmail.com'
+                      'ivanr784@hotmail.com'
                     ),
                     SizedBox(height: 20,),
                     ItemCountColumnaVertical(
@@ -32,7 +32,7 @@ class ContactoView extends StatelessWidget {
                       'assets/mujer.png', 
                       'PAMELA PATRICIA GARCIA PALACIOS', 
                       '321546879789', 
-                      'profe2@gmail.com'
+                      'pamepatricia789&@gmail.com'
                     ),
                     SizedBox(height: 20,),
                   ],

@@ -3,6 +3,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:profesores2/components/botones.dart';
+import 'package:profesores2/components/items.dart';
 import 'package:profesores2/components/textos.dart';
 import 'package:profesores2/components/titulos.dart';
 import 'package:profesores2/components/urls.dart';
@@ -68,9 +69,13 @@ class _ModuloLecturaState extends State<ModuloLectura> {
                       ),
                     SizedBox(height: 10.0),
                     video_show('-C-YpcVkvc8'),
-                    SizedBox(height: 10,),
-                    //SECCION DE TEXTOS
-                    //SECCIONM CON LOS 3 ICONOS HORIZONTALES
+                    SizedBox(height: 20,),
+                    titulos2('HERRAMIENTAS'),
+                    SizedBox(height: 10.0),
+                    itemsReferencia(context),
+                    SizedBox(height: 20.0),
+                    titulos2('TEXTOS'),
+                    SizedBox(height: 10.0),
                     SizedBox(height: 20,),
                     btnAzul1('FINALIZAR', () => Get.back()),
                     SizedBox(height: 20,),

@@ -112,3 +112,28 @@ Widget ItemCountColumnaVertical(BuildContext context, String imagen, String prof
     ],
   );
 }
+
+Widget itemsReferencia(BuildContext context){
+
+  double screenWidth = MediaQuery.of(context).size.width;
+
+  return Row(
+    mainAxisAlignment: MainAxisAlignment.center,
+    children: [
+      Image(
+        image: AssetImage('assets/pdf.png'),
+        width: screenWidth*0.2,
+      ),
+      SizedBox(width: screenWidth*0.1,),
+      Image(
+        image: AssetImage('assets/word.png'),
+        width: screenWidth*0.2,
+      ),
+      SizedBox(width: screenWidth*0.1,),
+      Image(
+        image: AssetImage('assets/ruleta.png'),
+        width: screenWidth*0.2,
+      ),
+    ],
+  );
+}

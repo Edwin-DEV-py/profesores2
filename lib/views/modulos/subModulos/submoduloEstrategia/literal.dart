@@ -3,6 +3,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:profesores2/components/botones.dart';
+import 'package:profesores2/components/items.dart';
 import 'package:profesores2/components/textos.dart';
 import 'package:profesores2/components/titulos.dart';
 import 'package:profesores2/components/urls.dart';
@@ -157,7 +158,8 @@ class _SubModuloLiteralState extends State<SubModuloLiteral> {
                       ),
                     ),
                     SizedBox(height: 10,),
-                    //LISTA DE ICONOS HORIZONTALES
+                    itemsReferencia(context),
+                    SizedBox(height: 20,),
                     video_show('-C-YpcVkvc8'),
                     SizedBox(height: 20,),
                     btnAzul1('FINALIZAR', () => Get.back()),

@@ -2,8 +2,9 @@
 
 import 'dart:io';
 
-import 'package:file_picker/file_picker.dart';
+//import 'package:file_picker/file_picker.dart';
 import 'package:flutter/material.dart';
+import 'package:path_provider/path_provider.dart';
 import 'botones.dart';
 
 Widget itemWithImage1(BuildContext context,double horizontal ,String text, String rutaImagen, double sizeImage, VoidCallback onPressed){
@@ -46,22 +47,24 @@ Widget itemWithDocument1(BuildContext context, String rutaImagen, String text, S
 
   Future<void> downloadPdf(BuildContext context) async {
     try {
-      String? selectedDirectory = await FilePicker.platform.getDirectoryPath();
-
-      if (selectedDirectory != null) {
-        final fileName = pdfFilePath.split('/').last;
-        final filePath = '$selectedDirectory/$fileName';
-        final byteData = await DefaultAssetBundle.of(context).load(pdfFilePath);
-        final file = await File(filePath).writeAsBytes(byteData.buffer.asUint8List());
-
-        ScaffoldMessenger.of(context).showSnackBar(
-          SnackBar(content: Text('PDF descargado correctamente en $filePath')),
-        );
+      Directory saveDirectory;
+      if (Platform.isAndroid) {
+        saveDirectory = Directory('/storage/emulated/0/Download');
+      } else if (Platform.isIOS) {
+        saveDirectory = await getApplicationDocumentsDirectory();
       } else {
-        ScaffoldMessenger.of(context).showSnackBar(
-          SnackBar(content: Text('Selección de carpeta cancelada')),
-        );
+        throw UnsupportedError('Plataforma no soportada');
       }
+
+      final fileName = pdfFilePath.split('/').last;
+      final filePath = '${saveDirectory.path}/$fileName';
+
+      final byteData = await DefaultAssetBundle.of(context).load(pdfFilePath);
+      final file = await File(filePath).writeAsBytes(byteData.buffer.asUint8List());
+
+      ScaffoldMessenger.of(context).showSnackBar(
+        SnackBar(content: Text('PDF descargado correctamente en $filePath')),
+      );
     } catch (e) {
       ScaffoldMessenger.of(context).showSnackBar(
         SnackBar(content: Text('Error al descargar el PDF: $e')),

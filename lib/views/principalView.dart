@@ -1,7 +1,10 @@
 // ignore_for_file: prefer_const_constructors, file_names, prefer_const_literals_to_create_immutables, unnecessary_this
 
+import 'dart:io';
+
 import 'package:flutter/material.dart';
 import 'package:curved_navigation_bar/curved_navigation_bar.dart';
+import 'package:flutter/services.dart';
 import 'package:profesores2/views/disclaimer.dart';
 import 'package:profesores2/views/modulos/contacto.dart';
 import 'package:profesores2/views/modulos/modulos.dart';
@@ -38,7 +41,15 @@ class _PrincipalViewState extends State<PrincipalView> {
         animationCurve: Curves.ease,
         onTap: (i){
           setState(() {
-            this.index = i;
+            if (i == pageIndex.length -1){
+              if (Platform.isAndroid){
+                SystemNavigator.pop();
+              }else if (Platform.isIOS) {
+                exit(0);
+              }
+            }else{
+              this.index = i;
+            }
           });
         },
         items: [

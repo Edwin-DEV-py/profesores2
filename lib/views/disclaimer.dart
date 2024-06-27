@@ -39,7 +39,6 @@ class Disclaimer extends StatelessWidget {
                 '4. Para aclarar cualquier duda o inquietud, se puede utilizar los canales de contacto con el propietario de la aplicación.'
               ),
               SizedBox(height: 10,),
-              titulos1('PROYECTO'),
               btnAzul1('CONTINUAR', () => Get.to(() => Home(), transition: Transition.rightToLeftWithFade, duration: Duration(milliseconds: 300))),
               SizedBox(height: 20,),
             ],

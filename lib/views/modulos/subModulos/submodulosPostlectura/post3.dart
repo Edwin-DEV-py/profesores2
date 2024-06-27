@@ -6,7 +6,6 @@ import 'package:profesores2/components/botones.dart';
 import 'package:profesores2/components/items.dart';
 import 'package:profesores2/components/textos.dart';
 import 'package:profesores2/components/titulos.dart';
-import 'package:profesores2/components/urls.dart';
 
 class Post3 extends StatelessWidget {
   const Post3({super.key});
@@ -58,10 +57,6 @@ class Post3 extends StatelessWidget {
                     ),
                     SizedBox(height: 10.0),
                     itemLectura(context, (){}),
-                    SizedBox(height: 10.0),
-                    titulos2('¿QUE APRENDISTE?'),
-                    SizedBox(height: 10.0),
-                    Widget_url_activities(''),
                     SizedBox(height: 20,),
                     btnAzul1('FINALIZAR',
                     (){Get.back();}

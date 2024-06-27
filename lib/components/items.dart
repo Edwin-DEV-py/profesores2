@@ -1,5 +1,8 @@
-// ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables, non_constant_identifier_names
+// ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables, non_constant_identifier_names, use_build_context_synchronously, unused_local_variable
 
+import 'dart:io';
+
+import 'package:file_picker/file_picker.dart';
 import 'package:flutter/material.dart';
 import 'botones.dart';
 
@@ -37,38 +40,66 @@ Widget itemWithImage2(BuildContext context,double horizontal ,String text, Strin
   );
 }
 
-Widget itemWithDocument1(BuildContext context, String rutaImagen, String text, String fecha){
+Widget itemWithDocument1(BuildContext context, String rutaImagen, String text, String fecha, String pdfFilePath) {
 
   double screenWidth = MediaQuery.of(context).size.width;
 
-  return Row(
-    children: [
-      Image(
-        image: AssetImage(rutaImagen),
-        width: screenWidth*0.2,
-      ),
-      SizedBox(width: 20),
-      Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          Text(
-            text,
-            style: TextStyle(
-              fontSize: 18.0,
-              fontWeight: FontWeight.bold,
-              color: Colors.black,
+  Future<void> downloadPdf(BuildContext context) async {
+    try {
+      String? selectedDirectory = await FilePicker.platform.getDirectoryPath();
+
+      if (selectedDirectory != null) {
+        final fileName = pdfFilePath.split('/').last;
+        final filePath = '$selectedDirectory/$fileName';
+        final byteData = await DefaultAssetBundle.of(context).load(pdfFilePath);
+        final file = await File(filePath).writeAsBytes(byteData.buffer.asUint8List());
+
+        ScaffoldMessenger.of(context).showSnackBar(
+          SnackBar(content: Text('PDF descargado correctamente en $filePath')),
+        );
+      } else {
+        ScaffoldMessenger.of(context).showSnackBar(
+          SnackBar(content: Text('Selección de carpeta cancelada')),
+        );
+      }
+    } catch (e) {
+      ScaffoldMessenger.of(context).showSnackBar(
+        SnackBar(content: Text('Error al descargar el PDF: $e')),
+      );
+    }
+  }
+
+  return GestureDetector(
+    onTap: () => downloadPdf(context),
+    child: Row(
+      children: [
+        Image(
+          image: AssetImage(rutaImagen),
+          width: screenWidth * 0.2,
+        ),
+        SizedBox(width: 20),
+        Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Text(
+              text,
+              style: TextStyle(
+                fontSize: 18.0,
+                fontWeight: FontWeight.bold,
+                color: Colors.black,
+              ),
             ),
-          ),
-          Text(
-            fecha,
-            style: TextStyle(
-              fontSize: 14.0,
-              color: Colors.grey,
+            Text(
+              fecha,
+              style: TextStyle(
+                fontSize: 14.0,
+                color: Colors.grey,
+              ),
             ),
-          ),
-        ],
-      ),
-    ],
+          ],
+        ),
+      ],
+    ),
   );
 }
 

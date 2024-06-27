@@ -6,6 +6,7 @@ import 'package:profesores2/components/botones.dart';
 import 'package:profesores2/components/items.dart';
 import 'package:profesores2/components/textos.dart';
 import 'package:profesores2/components/titulos.dart';
+import 'package:profesores2/views/modulos/recursos.dart';
 
 class Post1 extends StatelessWidget {
   const Post1({super.key});
@@ -56,7 +57,7 @@ class Post1 extends StatelessWidget {
                       ),
                     ),
                     SizedBox(height: 10.0),
-                    itemLectura(context, (){}),
+                    itemLectura(context, () => Get.to(RecursosView())),
                     SizedBox(height: 20,),
                     btnAzul1('FINALIZAR',
                     (){Get.back();}

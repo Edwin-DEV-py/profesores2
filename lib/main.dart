@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:profesores2/views/disclaimer.dart';
 import 'package:profesores2/views/home.dart';
+import 'package:profesores2/views/portada.dart';
 
 void main() {
   runApp(const MainApp());
@@ -16,10 +17,11 @@ class MainApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return GetMaterialApp(
       debugShowCheckedModeBanner: false,
-      initialRoute: 'disclaimer/',
+      initialRoute: 'portada/',
       routes: {
         'disclaimer/': (context) => Disclaimer(),
-        'home/': (context) => Home()
+        'home/': (context) => Home(),
+        'portada/': (context) => PortadaView()
       },
     );
   }

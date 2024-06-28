@@ -30,7 +30,7 @@ class _ModuloIntroduccionState extends State<ModuloIntroduccion> {
                   shrinkWrap: true,
                   children: [
                     textoParrafosJustificado(
-                      'El proyecto Léame tiene como objetivo mejorar los niveles de comprensión lectora de los estudiantes de 10º grado del Colegio El Carmen, especialmente aquellos de estratos 1 y 2, quienes presentan dificultades en la comprensión lectora, específicamente en el área de lectura inferencial. Para ello, hemos desarrollado una aplicación móvil dividida en los siguientes módulos:'
+                      'El proyecto Léame tiene como objetivo mejorar los niveles de comprensión lectora de los estudiantes de 10º grado del Colegio I.E.R Tulapita, especialmente aquellos de estratos 1 y 2, quienes presentan dificultades en la comprensión lectora, específicamente en el área de lectura inferencial. Para ello, hemos desarrollado una aplicación móvil dividida en los siguientes módulos:'
                     ),
                     textoParrafosJustificado(
                       '1.Introducción: Proporciona una visión general del proyecto, explicando su propósito y estructura.'

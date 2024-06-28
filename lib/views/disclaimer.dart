@@ -30,13 +30,13 @@ class Disclaimer extends StatelessWidget {
                 '1. Esta aplicación está diseñada para estudiantes y profesores que abordan temas de comprensión lectora.'
               ),
               textoParrafos(
-                '2. Los cuestionarios y actividades deben ser personalizados por el docente de acuerdo a su preferencia; se recomienda emplear Google Forms para la creación de cuestionarios y el envío de actividades, utilizando un correo propio del profesor, ya que esto facilita la estructuración. De lo contrario, si no se sigue esta sugerencia, los cuestionarios y actividades se enviarán al correo de la docente creadora de la aplicación.'
+                '2. Los cuestionarios y actividades deben ser personalizados por el docente de acuerdo a su preferencia; se recomienda emplear Google Forms para la creación de cuestionarios y el envío de actividades, utilizando un correo propio del profesor, ya que esto facilita la estructuración. De lo contrario, si no se sigue esta sugerencia, los cuestionarios y actividades se enviarán al correo de los docentes creadores de la aplicación.'
               ),
               textoParrafos(
                 '3. Los cuestionarios y el envío de actividades incluidos en esta aplicación están vinculados a un correo electrónico único, lo que significa que solo el propietario de ese correo puede visualizar el envío de actividades y la puntuación de los cuestionarios.'
               ),
               textoParrafos(
-                '4. Para aclarar cualquier duda o inquietud, se puede utilizar los canales de contacto con el propietario de la aplicación.'
+                '4. Para aclarar cualquier duda o inquietud, se puede utilizar los canales de contacto con los propietarios de la aplicación.'
               ),
               SizedBox(height: 10,),
               btnAzul1('CONTINUAR', () => Get.to(() => Home(), transition: Transition.rightToLeftWithFade, duration: Duration(milliseconds: 300))),

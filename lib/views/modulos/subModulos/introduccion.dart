@@ -64,7 +64,7 @@ class _ModuloIntroduccionState extends State<ModuloIntroduccion> {
                     SizedBox(height: 10,),
                     subTitulos('CONTEXTO Y ALCANCE'),
                     textoParrafosJustificado(
-                      'Este proyecto busca implementar la estrategia QEA (Quiero Entender Aprendo) para mejorar la comprensión lectora mediante el uso de la aplicación Léame. La población objetivo son los estudiantes de décimo grado del colegio Microempresarial El Carmen. Se utilizarán diversas estrategias pedagógicas basadas en investigaciones académicas para desarrollar y evaluar la comprensión lectora.'
+                      'Este proyecto busca implementar la estrategia QEA (Quiero Entender Aprendo) para mejorar la comprensión lectora mediante el uso de la aplicación Léame. La población objetivo son los estudiantes de décimo grado del Colegio I.E.R Tulapita. Se utilizarán diversas estrategias pedagógicas basadas en investigaciones académicas para desarrollar y evaluar la comprensión lectora.'
                     ),
                     SizedBox(height: 10,),
                     subTitulos('ESTRATEGIAS UTILIZADAS BASADAS EN ISABEL SOLE'),
